@@ -1,0 +1,41 @@
+.root {
+     -fx-background-image: url("1.bmp");
+}
+#toolbar {
+    -fx-font-size: 16px;
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: linear-gradient(#E6E6FA, #87CEFA);
+    -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+}
+#AddCircle {
+    -fx-background-image: url("5.jpg");
+    -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+}
+#AddLine {
+    -fx-background-image: url("5.jpg");
+    -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+}
+#DeleteObject {
+    -fx-background-image: url("5.jpg");
+    -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+}
+#NewFile {
+    -fx-background-image: url("5.jpg");
+    -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+}
+#OpenFile {
+              -fx-background-image: url("5.jpg");
+              -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+          }
+#Empty {
+           -fx-background-image: url("5.jpg");
+           -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+       }
+#Refresh {
+           -fx-background-image: url("5.jpg");
+           -fx-effect: dropshadow( one-pass-box , black , 12 , 0.0 , 1 , 1 );
+       }
+
+#rectangle {
+    -fx-background-image: url("1.bmp");
+}
