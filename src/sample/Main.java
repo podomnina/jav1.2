@@ -80,9 +80,10 @@ public class Main extends Application {
     private double dy=0;
     private double width=852;
     private double height=531;
+    private Scene scene;
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(final Stage primaryStage) {
 
         primaryStage.setTitle("Graph Editor");
         root = new Group();
@@ -95,7 +96,7 @@ public class Main extends Application {
         layout.getChildren().setAll(zoomPane,toolbar);
 
         VBox.setVgrow(zoomPane, Priority.ALWAYS);       ///////////
-        Scene scene = new Scene(layout,width,height);
+        scene = new Scene(layout,width,height);
 
 
         primaryStage.setScene(scene);
@@ -109,6 +110,7 @@ public class Main extends Application {
 
 
         image = new ImageView(getClass().getResource("11-1.jpg").toExternalForm());
+
         root.getChildren().addAll(image);
 
 
@@ -155,9 +157,13 @@ public class Main extends Application {
                     dragAnchor = new Point2D(me.getSceneX(), me.getSceneY());
                     final Circle circleBig = createCircle("Circle", javafx.scene.paint.Color.BLUE, 30);
 
+                if (RoundZoom(zoom,2)==1.2)
+                {circleBig.setTranslateX(me.getSceneX()+70*1.2);
+                    circleBig.setTranslateY(me.getSceneY()+40*1.2);}
+                else {
                     circleBig.setTranslateX(me.getSceneX());
                     circleBig.setTranslateY(me.getSceneY());
-
+                }
                     System.out.println(circleBig.getTranslateX());
                     System.out.println(circleBig.getTranslateY());
 
@@ -683,8 +689,9 @@ public class Main extends Application {
                 @Override
                 public void handle(ScrollEvent event) {
                     event.consume();
-                    delta=event.getDeltaY();
-                    System.out.println("delta"+delta);
+
+                    System.out.println("zoompane" + zoomPane.getLayoutX()+zoomPane.getTranslateX());
+
 
                     if (event.getDeltaY() == 0) {
                         return;
